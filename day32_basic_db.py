@@ -5,7 +5,7 @@ from pathlib import Path
 import psycopg
 from dotenv import load_dotenv
 from psycopg.rows import dict_row
-from psycopg.types.json import  Jsonb
+from psycopg.types.json import Jsonb
 
 load_dotenv()
 
@@ -38,23 +38,3 @@ def save_run(label, result):
 
 def list_runs(keyword = ''):
     return execute('list.sql',(f'%{keyword.strip()}%',))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
